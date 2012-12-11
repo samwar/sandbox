@@ -1,0 +1,44 @@
+/**
+ * 
+ */
+
+/**
+ * @author SWARTERS
+ *
+ */
+public class HalfChristmasTree {
+
+	public static void treePrinter(int height) {
+        StringBuilder sb = new StringBuilder();
+        
+        for(int i = 1; i <= height; i++) {            
+            for(int j = i; j>=1; j--){
+               
+                    if(j%2 == 0 && i%2 ==0) {
+                        sb.append("*");
+                    } else {
+                        sb.append(" ");
+                    }
+                
+                
+            }
+            sb.reverse();
+            System.out.println(sb.toString());
+            sb = new StringBuilder();
+            
+        }
+        
+        
+        
+    }
+    
+    
+    
+    public static void main(String []args){
+        treePrinter(1);
+        //treePrinter(5);
+        //treePrinter(20);
+        
+    }
+
+}
